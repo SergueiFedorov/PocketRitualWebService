@@ -1,0 +1,6 @@
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic.UnitTests\bin\Debug\PocketRitualBussinessLogic.UnitTests.dll
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic.UnitTests\bin\Debug\PocketRitualBussinessLogic.UnitTests.pdb
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic.UnitTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic.UnitTests\obj\Debug\PocketRitualBussinessLogic.UnitTests.csprojResolveAssemblyReference.cache
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic.UnitTests\obj\Debug\PocketRitualBussinessLogic.UnitTests.dll
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic.UnitTests\obj\Debug\PocketRitualBussinessLogic.UnitTests.pdb

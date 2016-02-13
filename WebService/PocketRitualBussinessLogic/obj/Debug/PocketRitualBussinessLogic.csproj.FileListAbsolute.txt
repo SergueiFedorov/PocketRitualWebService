@@ -1,0 +1,13 @@
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\bin\Debug\PocketRitualBussinessLogic.dll.config
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\bin\Debug\PocketRitualBussinessLogic.dll
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\bin\Debug\PocketRitualBussinessLogic.pdb
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\Debug\WebService.Migrations.Initial.resources
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.csproj.GenerateResource.Cache
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.dll
+C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.pdb
