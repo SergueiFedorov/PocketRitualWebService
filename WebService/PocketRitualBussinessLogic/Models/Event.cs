@@ -11,9 +11,9 @@ namespace PocketRitual.Models
     public class Event
     {
         [Key]
-        public int EventID { get; set; }
-        public int ActionID { get; set; }
-        [ForeignKey("ActionID")]
+        public int EventId { get; set; }
+        public int ActionId { get; set; }
+        [ForeignKey("ActionId")]
         public virtual Action Action { get; set; }
         public DateTime Time { get; set; }
     }

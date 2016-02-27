@@ -11,10 +11,10 @@ namespace PocketRitual.Models
     public class Card
     {
         [Key]
-        public int CardID { get; set; }
+        public int CardId { get; set; }
         public string Name { get; set; }
-        public int CardCategoryID { get; set; }
-        [ForeignKey("CardCategoryID")]
+        public int CardCategoryId { get; set; }
+        [ForeignKey("CardCategoryId")]
         public virtual CardCategory CardCategory { get; set; }
         public string Description { get; set; }
     }

@@ -8,7 +8,7 @@ namespace WebService.API.Query_Objects
     public class CardCategoryQuery
     {
         //public DateTime? CreatedDate { get; set; }
-        public int? CardCategoryID { get; set; }
+        public int? CardCategoryId { get; set; }
         public string CardCategoryName { get; set; }
         public string Desc { get; set; }
     }

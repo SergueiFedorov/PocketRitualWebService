@@ -11,12 +11,12 @@ namespace PocketRitual.Models
     public class CardAction
     {
         [Key]
-        public int CardActionID { get; set; }
-        public int CardID { get; set; }
-        [ForeignKey("CardID")]
+        public int CardActionId { get; set; }
+        public int CardId { get; set; }
+        [ForeignKey("CardId")]
         public virtual Card Card { get; set; }
-        public int ActionID { get; set; }
-        [ForeignKey("ActionID")]
+        public int ActionId { get; set; }
+        [ForeignKey("ActionId")]
         public virtual Action Action { get; set; }
 
     }

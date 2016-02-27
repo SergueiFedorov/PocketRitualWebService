@@ -33,9 +33,9 @@ namespace WebService.API
         {
             IQueryable<ActionCategory> databaseQuery = _context.ActionCategories;
 
-            if (query.ActionCategoryID.HasValue)
+            if (query.ActionCategoryId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionCategoryID == query.ActionCategoryID.Value);
+                databaseQuery = databaseQuery.Where(x => x.ActionCategoryId == query.ActionCategoryId.Value);
             }
 
             if (query.ActionCategoryName != null)
@@ -66,7 +66,7 @@ namespace WebService.API
         // PUT api/<controller>/5
         public void Put(int id, [FromBody] ActionCategory value)
         {
-            var result = _context.ActionCategories.SingleOrDefault(x => x.ActionCategoryID == id);
+            var result = _context.ActionCategories.SingleOrDefault(x => x.ActionCategoryId == id);
             if (result == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -81,7 +81,7 @@ namespace WebService.API
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
-            var toRemove = this.Get(new ActionCategoryQuery() { ActionCategoryID = id }).SingleOrDefault();
+            var toRemove = this.Get(new ActionCategoryQuery() { ActionCategoryId = id }).SingleOrDefault();
 
             if (toRemove == null)
             {

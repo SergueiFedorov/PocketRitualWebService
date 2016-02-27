@@ -67,6 +67,7 @@
   <ItemGroup>
     <Compile Include="CardAPIController.cs" />
     <Compile Include="JourneyAPIController.cs" />
+    <Compile Include="JourneyCardAPIController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserAPIController.cs" />
   </ItemGroup>

@@ -32,19 +32,19 @@ namespace WebService.API
         {
             IQueryable<CardAction> databaseQuery = _context.CardActions;
 
-            if (query.CardActionID.HasValue)
+            if (query.CardActionId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.CardActionID == query.CardActionID.Value);
+                databaseQuery = databaseQuery.Where(x => x.CardActionId == query.CardActionId.Value);
             }
 
-            if (query.CardID.HasValue)
+            if (query.CardId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.CardID == query.CardID);
+                databaseQuery = databaseQuery.Where(x => x.CardId == query.CardId);
             }
 
-            if (query.ActionID.HasValue)
+            if (query.ActionId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionID == query.ActionID);
+                databaseQuery = databaseQuery.Where(x => x.ActionId == query.ActionId);
             }
 
             /*
@@ -69,14 +69,14 @@ namespace WebService.API
         // PUT api/<controller>/5
         public void Put(int id, [FromBody] CardAction value)
         {
-            var result = _context.CardActions.SingleOrDefault(x => x.CardActionID == id);
+            var result = _context.CardActions.SingleOrDefault(x => x.CardActionId == id);
             if (result == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
             
-            result.CardID = value.CardID;
-            result.ActionID = value.ActionID;
+            result.CardId = value.CardId;
+            result.ActionId = value.ActionId;
             
             _context.SaveChanges();
         }
@@ -84,7 +84,7 @@ namespace WebService.API
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
-            var toRemove = this.Get(new CardActionQuery() { CardActionID = id }).SingleOrDefault();
+            var toRemove = this.Get(new CardActionQuery() { CardActionId = id }).SingleOrDefault();
 
             if (toRemove == null)
             {

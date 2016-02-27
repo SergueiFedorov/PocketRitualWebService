@@ -11,12 +11,12 @@ namespace PocketRitual.Models
     public class JourneyCard
     {
         [Key]
-        public int JourneyCardID { get; set; }
-        public int JourneyID { get; set; }
-        [ForeignKey("JourneyID")]
+        public int JourneyCardId { get; set; }
+        public int JourneyId { get; set; }
+        [ForeignKey("JourneyId")]
         public virtual Journey Journey { get; set; }
-        public int CardID { get; set; }
-        [ForeignKey("CardID")]
+        public int CardId { get; set; }
+        [ForeignKey("CardId")]
         public virtual Card Card { get; set; }
         public DateTime Time { get; set; }
         public string Notes { get; set; }

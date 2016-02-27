@@ -34,7 +34,7 @@ namespace WebService.API
 
             if (query.CardId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.CardID == query.CardId.Value);
+                databaseQuery = databaseQuery.Where(x => x.CardId == query.CardId.Value);
             }
 
             if (query.Name != null)
@@ -64,14 +64,14 @@ namespace WebService.API
         // PUT api/<controller>/5
         public void Put(int id, [FromBody] Card value)
         {
-            var result = _context.Cards.SingleOrDefault(x => x.CardID == id);
+            var result = _context.Cards.SingleOrDefault(x => x.CardId == id);
             if (result == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
             result.Name = value.Name;
-            result.CardID = value.CardID;
+            result.CardId = value.CardId;
 
             _context.SaveChanges();
         }

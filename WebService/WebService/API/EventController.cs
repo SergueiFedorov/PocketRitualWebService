@@ -32,14 +32,14 @@ namespace WebService.API
         {
             IQueryable<Event> databaseQuery = _context.Events;
 
-            if (query.EventID.HasValue)
+            if (query.EventId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.EventID == query.EventID.Value);
+                databaseQuery = databaseQuery.Where(x => x.EventId == query.EventId.Value);
             }
 
-            if (query.ActionID.HasValue)
+            if (query.ActionId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionID == query.ActionID);
+                databaseQuery = databaseQuery.Where(x => x.ActionId == query.ActionId);
             }
 
             if (query.Time.HasValue)
@@ -63,13 +63,13 @@ namespace WebService.API
         // PUT api/<controller>/5
         public void Put(int id, [FromBody] Event value)
         {
-            var result = _context.Events.SingleOrDefault(x => x.EventID == id);
+            var result = _context.Events.SingleOrDefault(x => x.EventId == id);
             if (result == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            result.ActionID = value.ActionID;
+            result.ActionId = value.ActionId;
             result.Time = value.Time; //TODO: Double check this. Do we want to refresh the time to current time?
 
             _context.SaveChanges();
@@ -78,7 +78,7 @@ namespace WebService.API
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
-            var toRemove = this.Get(new EventQuery() { EventID = id }).SingleOrDefault();
+            var toRemove = this.Get(new EventQuery() { EventId = id }).SingleOrDefault();
 
             if (toRemove == null)
             {

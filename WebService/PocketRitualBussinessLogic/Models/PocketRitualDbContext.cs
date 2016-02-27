@@ -10,9 +10,8 @@ namespace PocketRitual.Models
     public partial class PocketRitualDbContext : DbContext, IPocketRitualDbContext
     {
         public PocketRitualDbContext()
-            : base("name=PocketRitualDbContext")
         {
-
+            
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -29,5 +28,6 @@ namespace PocketRitual.Models
         public virtual DbSet<Journey> Journeys { get; set; }
         public virtual DbSet<JourneyCard> JourneyCards { get; set; }
         public virtual DbSet<User> Users { get; set; }
+        
     }
 }

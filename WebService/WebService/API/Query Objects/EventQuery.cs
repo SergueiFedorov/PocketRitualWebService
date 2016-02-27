@@ -8,7 +8,7 @@ namespace WebService.API.Query_Objects
     public class EventQuery
     {
         public DateTime? Time { get; set; }
-        public int? EventID { get; set; }
-        public int? ActionID { get; set; }
+        public int? EventId { get; set; }
+        public int? ActionId { get; set; }
     }
 }

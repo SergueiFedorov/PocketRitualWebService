@@ -41,7 +41,7 @@ namespace WebService.UnitTests
             var result = testElement.card_controller.Get(queryObject);
 
             Assert.AreEqual(1, result.Count());
-            Assert.AreEqual(result.ElementAt(0).CardID, 1);
+            Assert.AreEqual(result.ElementAt(0).CardId, 1);
         }
 
         [TestMethod]
@@ -83,11 +83,11 @@ namespace WebService.UnitTests
 
             var testElement = MockingTools.CreateBasicSetup(Card_COUNT);
 
-            testElement.card_controller.Post(new Card() { Name = "test", CardID = 1});
+            testElement.card_controller.Post(new Card() { Name = "test", CardId = 1});
 
-            var result = testElement.context.Cards.SingleOrDefault(x => x.Name == "test" && x.CardID == 1);
+            var result = testElement.context.Cards.SingleOrDefault(x => x.Name == "test" && x.CardId == 1);
 
-            Assert.IsTrue(result.Name == "test" && result.CardID == 1);
+            Assert.IsTrue(result.Name == "test" && result.CardId == 1);
         }
 
         [TestMethod]
@@ -98,13 +98,13 @@ namespace WebService.UnitTests
 
             var testElement = MockingTools.CreateBasicSetup(Card_COUNT);
 
-            Card updatedCard = new Card() { Name = "newName", CardID = 10 };
+            Card updatedCard = new Card() { Name = "newName", CardId = 10 };
 
             testElement.card_controller.Put(Card_ID, updatedCard);
 
-            var result = testElement.context.Cards.SingleOrDefault(x => x.CardID == 10 && x.Name == "newName");
+            var result = testElement.context.Cards.SingleOrDefault(x => x.CardId == 10 && x.Name == "newName");
 
-            Assert.IsTrue(result.Name == "newName" && result.CardID == 10);
+            Assert.IsTrue(result.Name == "newName" && result.CardId == 10);
         }
 
         [TestMethod]
@@ -129,7 +129,7 @@ namespace WebService.UnitTests
 
             testElement.card_controller.Delete(Card_ID);
 
-            var result = testElement.context.Cards.SingleOrDefault(x => x.CardID == 10 && x.Name == "newName");
+            var result = testElement.context.Cards.SingleOrDefault(x => x.CardId == 10 && x.Name == "newName");
 
             Assert.IsNull(result);
         }

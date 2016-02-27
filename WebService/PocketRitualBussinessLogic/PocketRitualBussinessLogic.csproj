@@ -59,9 +59,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Migrations\201512121958167_Initial.cs" />
-    <Compile Include="Migrations\201512121958167_Initial.Designer.cs">
-      <DependentUpon>201512121958167_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201602271805479_Initial1.cs" />
+    <Compile Include="Migrations\201602271805479_Initial1.Designer.cs">
+      <DependentUpon>201602271805479_Initial1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Action.cs" />
@@ -84,8 +84,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201512121958167_Initial.resx">
-      <DependentUpon>201512121958167_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201602271805479_Initial1.resx">
+      <DependentUpon>201602271805479_Initial1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Choose>

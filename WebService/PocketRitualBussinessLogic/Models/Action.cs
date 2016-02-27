@@ -11,9 +11,9 @@ namespace PocketRitual.Models
     public class Action
     {
         [Key]
-        public int ActionID { get; set; }
-        public int ActionCategoryID { get; set; }
-        [ForeignKey("ActionCategoryID")]
+        public int ActionId { get; set; }
+        public int ActionCategoryId { get; set; }
+        [ForeignKey("ActionCategoryId")]
         public virtual ActionCategory ActionCategory { get; set; }
         public string Name { get; set; }
         public string Desc { get; set; }

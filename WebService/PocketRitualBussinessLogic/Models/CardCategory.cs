@@ -11,7 +11,7 @@ namespace PocketRitual.Models
     public class CardCategory
     {
         [Key]
-        public int CardCategoryID { get; set; }
+        public int CardCategoryId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
     }

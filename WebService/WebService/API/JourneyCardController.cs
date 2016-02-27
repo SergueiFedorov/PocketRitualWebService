@@ -32,19 +32,19 @@ namespace WebService.API
         {
             IQueryable<JourneyCard> databaseQuery = _context.JourneyCards;
 
-            if (query.JourneyCardID.HasValue)
+            if (query.JourneyCardId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.JourneyCardID == query.JourneyCardID.Value);
+                databaseQuery = databaseQuery.Where(x => x.JourneyCardId == query.JourneyCardId.Value);
             }
 
-            if (query.JourneyID.HasValue)
+            if (query.JourneyId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.JourneyID == query.JourneyID);
+                databaseQuery = databaseQuery.Where(x => x.JourneyId == query.JourneyId);
             }
 
-            if (query.CardID.HasValue)
+            if (query.CardId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.CardID == query.CardID);
+                databaseQuery = databaseQuery.Where(x => x.CardId == query.CardId);
             }
 
             if (query.Time.HasValue)
@@ -68,14 +68,14 @@ namespace WebService.API
         // PUT api/<controller>/5
         public void Put(int id, [FromBody] JourneyCard value)
         {
-            var result = _context.JourneyCards.SingleOrDefault(x => x.JourneyCardID == id);
+            var result = _context.JourneyCards.SingleOrDefault(x => x.JourneyCardId == id);
             if (result == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            result.JourneyID = value.JourneyID;
-            result.CardID = value.CardID;
+            result.JourneyId = value.JourneyId;
+            result.CardId = value.CardId;
             result.Notes = value.Notes;
             result.Time = value.Time; //TODO: Double check this. Do we want to refresh the time to current time?
 
@@ -85,7 +85,7 @@ namespace WebService.API
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
-            var toRemove = this.Get(new JourneyCardQuery() { JourneyCardID = id }).SingleOrDefault();
+            var toRemove = this.Get(new JourneyCardQuery() { JourneyCardId = id }).SingleOrDefault();
 
             if (toRemove == null)
             {

@@ -33,9 +33,9 @@ namespace WebService.API
         {
             IQueryable<CardCategory> databaseQuery = _context.CardCategories;
 
-            if (query.CardCategoryID.HasValue)
+            if (query.CardCategoryId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.CardCategoryID == query.CardCategoryID.Value);
+                databaseQuery = databaseQuery.Where(x => x.CardCategoryId == query.CardCategoryId.Value);
             }
 
             if (query.CardCategoryName != null)
@@ -66,7 +66,7 @@ namespace WebService.API
         // PUT api/<controller>/5
         public void Put(int id, [FromBody] CardCategory value)
         {
-            var result = _context.CardCategories.SingleOrDefault(x => x.CardCategoryID == id);
+            var result = _context.CardCategories.SingleOrDefault(x => x.CardCategoryId == id);
             if (result == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
@@ -81,7 +81,7 @@ namespace WebService.API
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
-            var toRemove = this.Get(new CardCategoryQuery() { CardCategoryID = id }).SingleOrDefault();
+            var toRemove = this.Get(new CardCategoryQuery() { CardCategoryId = id }).SingleOrDefault();
 
             if (toRemove == null)
             {

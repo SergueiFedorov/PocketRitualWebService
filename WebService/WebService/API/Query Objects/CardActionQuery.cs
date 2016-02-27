@@ -8,8 +8,8 @@ namespace WebService.API.Query_Objects
     public class CardActionQuery
     {
         //public DateTime? CreatedDate { get; set; }
-        public int? CardActionID { get; set; }
-        public int? CardID { get; set; }
-        public int? ActionID { get; set; }
+        public int? CardActionId { get; set; }
+        public int? CardId { get; set; }
+        public int? ActionId { get; set; }
     }
 }

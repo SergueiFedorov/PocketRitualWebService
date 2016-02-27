@@ -11,3 +11,16 @@ C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\De
 C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.csproj.GenerateResource.Cache
 C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.dll
 C:\Users\Bribz\Desktop\PocketRitual\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.pdb
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\bin\Debug\PocketRitualBussinessLogic.dll.config
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\bin\Debug\PocketRitualBussinessLogic.dll
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\bin\Debug\PocketRitualBussinessLogic.pdb
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\bin\Debug\EntityFramework.dll
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\bin\Debug\EntityFramework.xml
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.csproj.GenerateResource.Cache
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.dll
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\obj\Debug\PocketRitualBussinessLogic.pdb
+C:\Users\Bribz\Documents\GitHub\PocketRitualWebService\WebService\PocketRitualBussinessLogic\obj\Debug\WebService.Migrations.Initial1.resources

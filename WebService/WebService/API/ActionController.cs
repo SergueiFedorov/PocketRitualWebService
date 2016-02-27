@@ -33,14 +33,14 @@ namespace WebService.API
         {
             IQueryable<PocketRitual.Models.Action> databaseQuery = _context.Actions;
 
-            if (query.ActionID.HasValue)
+            if (query.ActionId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionID == query.ActionID.Value);
+                databaseQuery = databaseQuery.Where(x => x.ActionId == query.ActionId.Value);
             }
 
-            if (query.ActionCategoryID.HasValue)
+            if (query.ActionCategoryId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionCategoryID == query.ActionCategoryID);
+                databaseQuery = databaseQuery.Where(x => x.ActionCategoryId == query.ActionCategoryId);
             }
 
             if (query.ActionName != null)
@@ -70,13 +70,13 @@ namespace WebService.API
         // PUT api/<controller>/5
         public void Put(int id, [FromBody] PocketRitual.Models.Action value)
         {
-            var result = _context.Actions.SingleOrDefault(x => x.ActionID == id);
+            var result = _context.Actions.SingleOrDefault(x => x.ActionId == id);
             if (result == null)
             {
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
 
-            result.ActionCategoryID = value.ActionCategoryID;
+            result.ActionCategoryId = value.ActionCategoryId;
             result.Name = value.Name;
             result.Desc = value.Desc;
 
@@ -86,7 +86,7 @@ namespace WebService.API
         // DELETE api/<controller>/5
         public void Delete(int id)
         {
-            var toRemove = this.Get(new ActionQuery() { ActionID = id }).SingleOrDefault();
+            var toRemove = this.Get(new ActionQuery() { ActionId = id }).SingleOrDefault();
 
             if (toRemove == null)
             {

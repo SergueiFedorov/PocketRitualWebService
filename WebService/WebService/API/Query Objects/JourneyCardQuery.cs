@@ -8,9 +8,9 @@ namespace WebService.API.Query_Objects
     public class JourneyCardQuery
     {
         public DateTime? Time { get; set; }
-        public int? JourneyCardID { get; set; }
-        public int? JourneyID { get; set; }
-        public int? CardID { get; set; }
+        public int? JourneyCardId { get; set; }
+        public int? JourneyId { get; set; }
+        public int? CardId { get; set; }
         public string Notes { get; set; }
     }
 }
