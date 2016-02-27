@@ -19,6 +19,8 @@ namespace PocketRitual.Models
 
         }
         
+        //Dispose model
+
         public virtual DbSet<Action> Actions { get; set; }
         public virtual DbSet<ActionCategory> ActionCategories { get; set; }
         public virtual DbSet<Card> Cards { get; set; }
