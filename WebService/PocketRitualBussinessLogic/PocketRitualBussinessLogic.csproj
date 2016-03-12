@@ -76,7 +76,24 @@
     <Compile Include="Models\PocketRitualDbContext.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Query Objects\ActionCategoryQuery.cs" />
+    <Compile Include="Query Objects\ActionQuery.cs" />
+    <Compile Include="Query Objects\CardActionQuery.cs" />
+    <Compile Include="Query Objects\CardCategoryQuery.cs" />
+    <Compile Include="Query Objects\CardQuery.cs" />
+    <Compile Include="Query Objects\EventQuery.cs" />
+    <Compile Include="Query Objects\JourneyCardQuery.cs" />
+    <Compile Include="Query Objects\JourneyQuery.cs" />
+    <Compile Include="Query Objects\UserQuery.cs" />
+    <Compile Include="Services\ActionCategoryService.cs" />
+    <Compile Include="Services\ActionService.cs" />
     <Compile Include="Services\BaseService.cs" />
+    <Compile Include="Services\CardActionService.cs" />
+    <Compile Include="Services\CardCategoryService.cs" />
+    <Compile Include="Services\CardService.cs" />
+    <Compile Include="Services\EventService.cs" />
+    <Compile Include="Services\JourneyCardService.cs" />
+    <Compile Include="Services\UserService.cs" />
     <Compile Include="Services\JourneyService.cs" />
   </ItemGroup>
   <ItemGroup>

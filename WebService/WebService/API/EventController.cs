@@ -34,19 +34,22 @@ namespace WebService.API
 
             if (query.EventId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.EventId == query.EventId.Value);
+                databaseQuery = (IQueryable<Event>)_context.EventService.GetEventsById((int)query.EventId); 
+                    //databaseQuery.Where(x => x.EventId == query.EventId.Value);
             }
 
             if (query.ActionId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionId == query.ActionId);
+                databaseQuery = (IQueryable<Event>)_context.EventService.GetEventsByActionId((int)query.ActionId);
+                    //databaseQuery.Where(x => x.ActionId == query.ActionId);
             }
 
             if (query.Time.HasValue)
             {
-                //Don't compare time portion
-                var timeValue = query.Time.Value;
-                databaseQuery = databaseQuery.Where(x => x.Time.Day == timeValue.Day && x.Time.Month == timeValue.Month && x.Time.Year == timeValue.Year);
+                databaseQuery = (IQueryable<Event>)_context.EventService.GetEventsByTime((DateTime) query.Time);
+
+                //var timeValue = query.Time.Value;
+                //databaseQuery = databaseQuery.Where(x => x.Time.Day == timeValue.Day && x.Time.Month == timeValue.Month && x.Time.Year == timeValue.Year);
             }
             
 

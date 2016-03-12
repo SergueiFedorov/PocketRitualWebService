@@ -34,24 +34,28 @@ namespace WebService.API
 
             if (query.JourneyCardId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.JourneyCardId == query.JourneyCardId.Value);
+                databaseQuery = (IQueryable<JourneyCard>)_context.JourneyCardService.GetJourneyCardsById((int)query.JourneyCardId);
+                    //databaseQuery.Where(x => x.JourneyCardId == query.JourneyCardId.Value);
             }
 
             if (query.JourneyId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.JourneyId == query.JourneyId);
+                databaseQuery = (IQueryable<JourneyCard>)_context.JourneyCardService.GetJourneyCardsByJourneyId((int)query.JourneyId);
+                    //databaseQuery.Where(x => x.JourneyId == query.JourneyId);
             }
 
             if (query.CardId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.CardId == query.CardId);
+                databaseQuery = (IQueryable<JourneyCard>)_context.JourneyCardService.GetJourneyCardsByCardId((int)query.CardId);
+                    //databaseQuery.Where(x => x.CardId == query.CardId);
             }
 
             if (query.Time.HasValue)
             {
-                //Don't compare time portion
-                var timeValue = query.Time.Value;
-                databaseQuery = databaseQuery.Where(x => x.Time.Day == timeValue.Day && x.Time.Month == timeValue.Month && x.Time.Year == timeValue.Year);
+                databaseQuery = (IQueryable<JourneyCard>)_context.JourneyCardService.GetJourneyCardsByTime((DateTime)query.Time);
+
+                //var timeValue = query.Time.Value;
+                //databaseQuery = databaseQuery.Where(x => x.Time.Day == timeValue.Day && x.Time.Month == timeValue.Month && x.Time.Year == timeValue.Year);
             }
 
 

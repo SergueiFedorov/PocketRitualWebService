@@ -35,12 +35,14 @@ namespace WebService.API
 
             if (query.ActionCategoryId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionCategoryId == query.ActionCategoryId.Value);
+                databaseQuery = (IQueryable<ActionCategory>)_context.ActionCategoryService.GetActionCategoriesById((int)query.ActionCategoryId);
+                //databaseQuery.Where(x => x.ActionCategoryId == query.ActionCategoryId.Value);
             }
 
             if (query.ActionCategoryName != null)
             {
-                databaseQuery = databaseQuery.Where(x => x.Name == query.ActionCategoryName);
+                databaseQuery = (IQueryable<ActionCategory>)_context.ActionCategoryService.GetActionCategoriesByName(query.ActionCategoryName);
+                //databaseQuery.Where(x => x.Name == query.ActionCategoryName);
             }
 
 

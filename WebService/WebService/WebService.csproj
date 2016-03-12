@@ -138,15 +138,6 @@
     <Compile Include="API\EventController.cs" />
     <Compile Include="API\JourneyCardController.cs" />
     <Compile Include="API\JourneyController.cs" />
-    <Compile Include="API\Query Objects\ActionCategoryQuery.cs" />
-    <Compile Include="API\Query Objects\ActionQuery.cs" />
-    <Compile Include="API\Query Objects\CardActionQuery.cs" />
-    <Compile Include="API\Query Objects\CardCategoryQuery.cs" />
-    <Compile Include="API\Query Objects\CardQuery.cs" />
-    <Compile Include="API\Query Objects\EventQuery.cs" />
-    <Compile Include="API\Query Objects\JourneyCardQuery.cs" />
-    <Compile Include="API\Query Objects\JourneyQuery.cs" />
-    <Compile Include="API\Query Objects\UserQuery.cs" />
     <Compile Include="API\UserController.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />

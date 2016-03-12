@@ -34,12 +34,14 @@ namespace WebService.API
 
             if (query.CardId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.CardId == query.CardId.Value);
+                databaseQuery = (IQueryable<Card>)_context.CardService.GetCardsById((int)query.CardId);
+                    //databaseQuery.Where(x => x.CardId == query.CardId.Value);
             }
 
             if (query.Name != null)
             {
-                databaseQuery = databaseQuery.Where(x => x.Name == query.Name);
+                databaseQuery = (IQueryable<Card>)_context.CardService.GetCardsByName(query.Name);
+                    //databaseQuery.Where(x => x.Name == query.Name);
             }
 
             /*

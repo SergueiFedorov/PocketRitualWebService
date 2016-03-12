@@ -35,19 +35,25 @@ namespace WebService.API
 
             if (query.UserId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.UserId == query.UserId.Value);
+                databaseQuery = (IQueryable<User>)_context.UserService.GetUsersById((int)query.UserId);
+                
+                //databaseQuery.Where(x => x.UserId == query.UserId.Value);
             }
 
             if (query.Email != null)
             {
-                databaseQuery = databaseQuery.Where(x => x.Email == query.Email);
+                //If you need to check for passwords later, you can replace this with GetUsersByEmailAndPassword
+                databaseQuery = (IQueryable<User>)_context.UserService.GetUsersByEmail(query.Email);
+                
+                //databaseQuery.Where(x => x.Email == query.Email);
             }
 
             if (query.CreatedDate.HasValue)
             {
-                //Don't compare time portion
-                var creatDateValue = query.CreatedDate.Value;
-                databaseQuery = databaseQuery.Where(x => x.CreatedDate.Day == creatDateValue.Day && x.CreatedDate.Month == creatDateValue.Month && x.CreatedDate.Year == creatDateValue.Year);
+                databaseQuery = (IQueryable<User>)_context.UserService.GetUsersByDate((int)query.UserId, (System.DateTime)query.CreatedDate);
+
+                //var creatDateValue = query.CreatedDate.Value;
+                //databaseQuery = databaseQuery.Where(x => x.CreatedDate.Day == creatDateValue.Day && x.CreatedDate.Month == creatDateValue.Month && x.CreatedDate.Year == creatDateValue.Year);
             }
 
             return databaseQuery;

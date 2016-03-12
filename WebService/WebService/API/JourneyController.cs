@@ -35,19 +35,22 @@ namespace WebService.API
 
             if (query.JourneyId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.JourneyId == query.JourneyId.Value);
+                databaseQuery = (IQueryable<Journey>) _context.JourneyService.GetJourneysById((int)query.JourneyId);
+                //databaseQuery = databaseQuery.Where(x => x.JourneyId == query.JourneyId.Value);
             }
 
-            if (query.JourneyName != null)
+            else if (query.JourneyName != null && query.UserId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.Name == query.JourneyName);
+                databaseQuery = (IQueryable<Journey>)_context.JourneyService.GetJourneysByName((int)query.UserId, query.JourneyName);
+                //databaseQuery = databaseQuery.Where(x => x.Name == query.JourneyName);
             }
 
-            if (query.CreatedDate.HasValue)
+            else if (query.CreatedDate.HasValue && query.UserId.HasValue)
             {
-                //Don't compare time portion
-                var creatDateValue = query.CreatedDate.Value;
-                databaseQuery = databaseQuery.Where(x => x.CreatedDate.Day == creatDateValue.Day && x.CreatedDate.Month == creatDateValue.Month && x.CreatedDate.Year == creatDateValue.Year);
+                databaseQuery = (IQueryable<Journey>)_context.JourneyService.GetJourneysByDate((int)query.UserId, (System.DateTime)query.CreatedDate);
+                
+                //var creatDateValue = query.CreatedDate.Value;
+                //databaseQuery = databaseQuery.Where(x => x.CreatedDate.Day == creatDateValue.Day && x.CreatedDate.Month == creatDateValue.Month && x.CreatedDate.Year == creatDateValue.Year);
             }
 
             return databaseQuery;

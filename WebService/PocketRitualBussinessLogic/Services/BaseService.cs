@@ -9,7 +9,7 @@ namespace PocketRitualBussinessLogic.Services
 {
     public abstract class BaseService
     {
-        IPocketRitualDbContext Context { get; }
+        protected IPocketRitualDbContext Context { get; }
         protected BaseService(IPocketRitualDbContext context)
         {
             this.Context = context;

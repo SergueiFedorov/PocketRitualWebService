@@ -35,14 +35,15 @@ namespace WebService.API
 
             if (query.CardCategoryId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.CardCategoryId == query.CardCategoryId.Value);
+                databaseQuery = (IQueryable<CardCategory>)_context.CardCategoryService.GetCardCategorysById((int)query.CardCategoryId);
+                    //databaseQuery.Where(x => x.CardCategoryId == query.CardCategoryId.Value);
             }
 
             if (query.CardCategoryName != null)
             {
-                databaseQuery = databaseQuery.Where(x => x.Name == query.CardCategoryName);
+                databaseQuery = (IQueryable<CardCategory>)_context.CardCategoryService.GetCardCategorysByName(query.CardCategoryName);
+                //databaseQuery.Where(x => x.Name == query.CardCategoryName);
             }
-
 
             /*
             if (query.CreatedDate.HasValue)

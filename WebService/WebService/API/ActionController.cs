@@ -35,12 +35,13 @@ namespace WebService.API
 
             if (query.ActionId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionId == query.ActionId.Value);
+                databaseQuery = (IQueryable<PocketRitual.Models.Action>)_context.ActionService.GetActionsById((int)query.ActionId);
+                    //databaseQuery.Where(x => x.ActionId == query.ActionId.Value);
             }
 
             if (query.ActionCategoryId.HasValue)
             {
-                databaseQuery = databaseQuery.Where(x => x.ActionCategoryId == query.ActionCategoryId);
+                databaseQuery = (IQueryable<PocketRitual.Models.Action>)_context.ActionService.GetActionsByCategoryId((int)query.ActionCategoryId);
             }
 
             if (query.ActionName != null)
